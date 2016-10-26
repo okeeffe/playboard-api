@@ -10,7 +10,7 @@
   "author": "Rory O'Keeffe <rorokeeffe@gmail.com>",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "nodemon lib/index.js --exec babel-node",
+    "start": "nodemon lib/index.js --verbose --exec babel-node",
     "build": "babel lib -d dist",
     "serve": "node dist/index.js"
   },
@@ -24,7 +24,7 @@
     "eslint-plugin-import": "latest",
     "eslint-plugin-jsx-a11y": "latest",
     "eslint-plugin-react": "^6.4.1",
-    "nodemon": "^1.11.0"
+    "nodemon": "~1.5.0"
   },
   "dependencies": {
     "basic-auth": "^1.0.4",
