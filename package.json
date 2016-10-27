@@ -30,7 +30,6 @@
     "basic-auth": "^1.0.4",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "jsonwebtoken": "^7.1.9",
     "mongoose": "^4.6.4",
     "morgan": "^1.7.0"
   }
