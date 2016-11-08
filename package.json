@@ -10,8 +10,8 @@
   "author": "Rory O'Keeffe <rorokeeffe@gmail.com>",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "nodemon lib/index.js --exec babel-node",
-    "build": "babel lib -d dist",
+    "start": "nodemon src/index.js --exec babel-node",
+    "build": "babel src -d dist",
     "serve": "node dist/index.js"
   },
   "devDependencies": {
