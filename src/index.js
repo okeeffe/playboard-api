@@ -1,4 +1,5 @@
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
 import morgan from 'morgan';
@@ -12,10 +13,11 @@ const port = config.port;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan('combined')); // logging
+app.use(cors());
 
 // Prefix all routes with /api/v1
 app.use('/api/v1', v1Router);
-
+ 
 // Setup MongoDB connection
 const options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
                   replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } } };

@@ -19,12 +19,13 @@ router.post('/', auth, (req, res) => {
 
 // /login
 router.post('/login', (req, res) => {
+  console.log(req.body);
   const email = req.body.email;
   const password = req.body.password;
 
   User.findOne({ email }, `${allUserPropsMongoStr}`, (findErr, user) => {
-    if (findErr) {
-      return res.status(404)
+    if (findErr || !user) {
+      return res.status(404   )
               .json({ code: 404, message: 'No user with that email address.' });
     }
 
